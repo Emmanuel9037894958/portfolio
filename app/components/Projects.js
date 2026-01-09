@@ -34,15 +34,22 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="py-24 bg-gradient-to-br from-gray-50 via-white to-gray-100 overflow-hidden"
+      className="
+        py-24
+        bg-gradient-to-br
+        from-gray-50 via-white to-gray-100
+        dark:from-gray-900 dark:via-gray-900 dark:to-gray-800
+        overflow-hidden
+        transition-colors duration-300
+      "
     >
       <div className="max-w-6xl mx-auto px-6">
         {/* Header */}
         <div className="max-w-3xl">
-          <h2 className="text-2xl md:text-3xl font-semibold text-gray-900">
+          <h2 className="text-2xl md:text-3xl font-semibold text-gray-900 dark:text-white transition-colors">
             Selected Projects
           </h2>
-          <p className="mt-4 text-gray-600">
+          <p className="mt-4 text-gray-600 dark:text-gray-400 transition-colors">
             A curated selection of real-world web applications I have designed
             and built, spanning payment systems, investment platforms,
             enterprise dashboards, business websites, and educational solutions.
@@ -58,7 +65,18 @@ export default function Projects() {
               key={index}
               className="w-[320px] md:w-[420px] mx-4 flex-shrink-0"
             >
-              <div className="relative h-[420px] md:h-[360px] rounded-2xl bg-white shadow-md overflow-hidden">
+              <div
+                className="
+                  relative
+                  h-[420px] md:h-[360px]
+                  rounded-2xl
+                  bg-white dark:bg-gray-800
+                  shadow-md dark:shadow-none
+                  border border-gray-200 dark:border-gray-700
+                  overflow-hidden
+                  transition-colors
+                "
+              >
                 <Image
                   src={project.image}
                   alt={project.name}
@@ -69,10 +87,10 @@ export default function Projects() {
               </div>
 
               <div className="mt-4">
-                <span className="text-xs uppercase tracking-wide text-gray-500">
+                <span className="text-xs uppercase tracking-wide text-gray-500 dark:text-gray-400 transition-colors">
                   {project.type}
                 </span>
-                <h3 className="mt-1 text-base font-semibold text-gray-900">
+                <h3 className="mt-1 text-base font-semibold text-gray-900 dark:text-white transition-colors">
                   {project.name}
                 </h3>
               </div>
@@ -84,7 +102,7 @@ export default function Projects() {
       {/* Closing Statement */}
       <div className="max-w-6xl mx-auto px-6 mt-14">
         <div className="max-w-3xl">
-          <p className="text-lg text-gray-700 leading-relaxed">
+          <p className="text-lg leading-relaxed text-gray-700 dark:text-gray-400 transition-colors">
             Beyond these showcased works, I have contributed to and developed
             numerous additional projects across diverse domains. My focus
             remains on building scalable, performance-driven, and visually

@@ -15,15 +15,20 @@ export default function Skills() {
   return (
     <section
       id="skills"
-      className="py-20 bg-white scroll-mt-24"
+      className="
+        py-20
+        bg-white dark:bg-gray-900
+        scroll-mt-24
+        transition-colors duration-300
+      "
     >
       <div className="max-w-6xl mx-auto px-6">
         <div className="max-w-3xl">
-          <h2 className="text-2xl md:text-3xl font-semibold text-gray-900">
+          <h2 className="text-2xl md:text-3xl font-semibold text-gray-900 dark:text-white transition-colors">
             Skills
           </h2>
 
-          <p className="mt-4 text-gray-600">
+          <p className="mt-4 text-gray-600 dark:text-gray-400 transition-colors">
             Technologies and tools I use to build modern, scalable, and
             user-focused web applications.
           </p>
@@ -34,14 +39,17 @@ export default function Skills() {
             <div
               key={skill}
               className="
-                border border-gray-200 rounded-md px-4 py-3
-                text-sm text-gray-700 text-center
+                rounded-md px-4 py-3
+                text-sm text-center
+                border
+                bg-white dark:bg-gray-800
+                border-gray-200 dark:border-gray-700
+                text-gray-700 dark:text-gray-300
                 transition-all duration-200 ease-out
-                hover:border-gray-300
-                hover:shadow-md
                 hover:-translate-y-1
+                hover:shadow-md
+                hover:border-gray-300 dark:hover:border-gray-600
                 hover:text-orange-500
-                bg-white
               "
             >
               {skill}
