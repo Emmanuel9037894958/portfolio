@@ -48,7 +48,7 @@ export default function Hero() {
                 className="
     relative
     px-6 py-3 text-sm rounded-md
-    border border-gray-300 text-gray-900
+    border border-gray-300 text-white
     hover:border-gray-400
     dark:border-gray-600
     dark:hover:border-gray-500
