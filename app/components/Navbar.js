@@ -19,17 +19,17 @@ export default function Navbar() {
       {/* Header */}
       <header
         className="
-    w-full
-    sticky top-0 z-50
-    bg-gradient-to-r
-    border-b
-    border-purple-200
-    dark:border-gray-800
-    shadow-[0_2px_12px_rgba(0,0,0,0.35)]
-    backdrop-blur bg-white/80
-  "
+          w-full
+          sticky top-0 z-50
+          bg-white
+          border-b
+          shadow-[0_4px_18px_rgba(0,0,0,0.12)]
+          border-gray-900
+          backdrop-blur
+        "
       >
         <nav className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+          
           {/* Logo */}
           <a href="#top" className="flex items-center h-10">
             <div className="h-10 w-auto overflow-visible">
@@ -52,12 +52,12 @@ export default function Navbar() {
           </a>
 
           {/* Desktop Menu */}
-          <ul className="hidden md:flex gap-10 text-sm font-bold text-gray-700 dark:text-gray-300">
+          <ul className="hidden md:flex gap-10 text-sm font-medium text-gray-700">
             {links.map((link) => (
               <li key={link.label} className="relative group">
                 <a
                   href={link.href}
-                  className="transition group-hover:text-gray-900 dark:group-hover:text-white"
+                  className="transition group-hover:text-gray-900"
                 >
                   {link.label}
                 </a>
@@ -69,7 +69,6 @@ export default function Navbar() {
                     h-[2px]
                     w-0
                     bg-green-500
-                    dark:bg-white
                     transition-all duration-300
                     group-hover:w-full
                   "
@@ -84,9 +83,9 @@ export default function Navbar() {
             onClick={() => setOpen(true)}
             aria-label="Open menu"
           >
-            <span className="block w-6 h-[2px] bg-gray-900 dark:bg-gray-100 mb-1"></span>
-            <span className="block w-6 h-[2px] bg-gray-900 dark:bg-gray-100 mb-1"></span>
-            <span className="block w-6 h-[2px] bg-gray-900 dark:bg-gray-100"></span>
+            <span className="block w-6 h-[2px] bg-gray-900 mb-1"></span>
+            <span className="block w-6 h-[2px] bg-gray-900 mb-1"></span>
+            <span className="block w-6 h-[2px] bg-gray-900"></span>
           </button>
         </nav>
       </header>
@@ -101,11 +100,12 @@ export default function Navbar() {
 
       {/* Mobile Slide Menu */}
       <aside
-        className={`fixed top-0 right-0 h-full w-72 bg-white dark:bg-gray-900 z-50 shadow-lg transform backdrop:backdrop-blur transition-transform duration-300 ${
+        className={`fixed top-0 right-0 h-full w-72 bg-white z-50 shadow-lg backdrop-blur transform transition-transform duration-300 ${
           open ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        <div className="flex items-center justify-between px-6 py-5 border-b border-gray-200 dark:border-gray-700">
+        <div className="flex items-center justify-between px-6 py-5 border-b border-gray-900">
+          
           {/* Mobile Logo */}
           <div className="h-10 w-auto">
             <Image
@@ -119,20 +119,20 @@ export default function Navbar() {
 
           <button
             onClick={() => setOpen(false)}
-            className="text-2xl leading-none text-gray-900 dark:text-gray-100"
+            className="text-2xl leading-none text-gray-900"
             aria-label="Close menu"
           >
             <X />
           </button>
         </div>
 
-        <ul className="flex flex-col gap-6 px-6 py-8 text-md text-gray-900 dark:text-gray-300">
+        <ul className="flex flex-col gap-6 px-6 py-8 text-md text-gray-700">
           {links.map((link) => (
             <li key={link.label}>
               <a
                 href={link.href}
                 onClick={() => setOpen(false)}
-                className="hover:text-gray-900 dark:hover:text-white transition"
+                className="hover:text-gray-900 transition"
               >
                 {link.label}
               </a>

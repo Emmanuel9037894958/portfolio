@@ -23,7 +23,7 @@ export default function Hero() {
                 href="#projects"
                 className="
     relative
-    px-6 py-3 text-lg rounded-md
+    px-6 py-3 text-sm rounded-md
     bg-gray-900 text-white
     hover:bg-gray-800
     dark:bg-white dark:text-gray-900
@@ -47,7 +47,7 @@ export default function Hero() {
                 href="#contact"
                 className="
     relative
-    px-6 py-3 text-lg rounded-md
+    px-6 py-3 text-sm rounded-md
     border border-gray-300 text-gray-900
     hover:border-gray-400
     dark:border-gray-600
