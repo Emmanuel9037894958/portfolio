@@ -62,9 +62,7 @@ export default function About() {
           <div className="mb-5 flex items-center gap-3">
           
 
-            <span className="text-sm font-semibold uppercase tracking-[0.2em] text-emerald-600 dark:text-emerald-400">
-              Get to know me
-            </span>
+           
           </div>
 
           <div className="grid gap-14 lg:grid-cols-[1.1fr_0.9fr]">

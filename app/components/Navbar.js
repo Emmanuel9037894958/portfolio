@@ -82,7 +82,9 @@ export default function Navbar() {
   return (
     <>
       {/* Main Navigation */}
-      <header className="sticky top-0 z-50 border-b border-gray-200/70 bg-white/90 shadow-[0_4px_25px_rgba(0,0,0,0.04)] backdrop-blur-xl transition-colors duration-300 dark:border-gray-700/60 dark:bg-gray-950/90">
+     
+<header className="sticky top-0 z-50 border-b border-[#DCE2DA]/70 bg-[linear-gradient(90deg,#FFFFFF_0%,#FFFFFF_20%,#E8F0E8_48%,#C9DDCF_100%)] shadow-[0_4px_25px_rgba(23,35,29,0.06)] backdrop-blur-xl transition-all duration-300">
+
         <nav
           className="mx-auto flex h-[76px] max-w-7xl items-center justify-between px-5 sm:px-8 lg:px-10"
           aria-label="Main navigation"
