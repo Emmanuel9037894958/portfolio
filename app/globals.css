@@ -1,45 +1,39 @@
+
 @import "tailwindcss";
 @plugin "daisyui";
+
+/* Enable class-based dark mode */
+@custom-variant dark (&:where(.dark, .dark *));
 
 /* Smooth scrolling */
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 90px;
 }
 
-/* Default (Light Mode) */
+/* Base styles */
+* {
+  box-sizing: border-box;
+}
+
 body {
   background-color: #ffffff;
   color: #171717;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Automatic Dark Mode (System Preference) */
-@media (prefers-color-scheme: dark) {
-  body {
-    background-color: #0a0a0a;
-    color: #ededed;
-  }
+/* Dark mode */
+html.dark body {
+  background-color: #0a0a0a;
+  color: #ededed;
 }
 
-/* Project slider animation */
-@keyframes projects-slide {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
-}
-
-.animate-projects-slide {
-  animation: projects-slide 35s linear infinite;
-}
-
-/* Slow rotating light around profile image */
+/* Profile image rotating animation */
 @keyframes spin-slow {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -47,4 +41,19 @@ body {
 
 .animate-spin-slow {
   animation: spin-slow 12s linear infinite;
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
